@@ -1,0 +1,6 @@
+{
+  "name": "Boda Juan y Belén 2027",
+  "description": "Invitación interactiva de boda para Juan y Belén - 17 de Julio de 2027 en el Faro de Mazarrón, Murcia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

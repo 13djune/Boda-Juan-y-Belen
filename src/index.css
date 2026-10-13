@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.32;
+  }
+  50% {
+    transform: translateY(-55vh) translateX(16px) scale(1.05);
+    opacity: 0.38;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-118vh) translateX(-14px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+.cute-bubble {
+  position: absolute;
+  top: 105%;
+  opacity: 0;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.4) 0%, rgba(165, 243, 252, 0.2) 45%, rgba(14, 116, 144, 0.08) 85%);
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.3), 0 0 5px rgba(103, 232, 249, 0.15);
+  animation: bubbleRise linear infinite;
+  animation-fill-mode: backwards;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.cute-bubble::after {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 22%;
+  width: 26%;
+  height: 26%;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Cursor Micro-bubbles over CTA Buttons */
+@keyframes ctaBubbleFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.35);
+    opacity: 0.85;
+  }
+  40% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(var(--drift-x, 0px), -36px, 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.cursor-micro-bubble {
+  position: fixed;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95) 0%, rgba(165, 243, 252, 0.6) 50%, rgba(14, 116, 144, 0.25) 90%);
+  box-shadow: inset -1px -1px 3px rgba(255, 255, 255, 0.6), 0 0 6px rgba(103, 232, 249, 0.4);
+  pointer-events: none;
+  animation: ctaBubbleFloat 0.7s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* Smooth Mediterranean Wave Transitions (Zero Scroll Cost) */
+@keyframes waveFlowFront {
+  0% {
+    transform: translateX(0) translateZ(0);
+  }
+  50% {
+    transform: translateX(-15%) translateZ(0);
+  }
+  100% {
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+@keyframes waveFlowBack {
+  0% {
+    transform: translateX(-15%) translateZ(0);
+  }
+  50% {
+    transform: translateX(0) translateZ(0);
+  }
+  100% {
+    transform: translateX(-15%) translateZ(0);
+  }
+}
+
+.ocean-wave-front {
+  animation: waveFlowFront 15s ease-in-out infinite;
+  will-change: transform;
+}
+
+.ocean-wave-back {
+  animation: waveFlowBack 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Organic Marine Creatures Swimming & Flora Sway Keyframes */
+@keyframes floatJelly {
+  0% {
+    transform: translateY(0) scaleY(1) scaleX(1) rotate(0deg);
+  }
+  35% {
+    transform: translateY(-24px) scaleY(1.08) scaleX(0.94) rotate(4deg);
+  }
+  70% {
+    transform: translateY(-10px) scaleY(0.95) scaleX(1.04) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1) rotate(0deg);
+  }
+}
+
+@keyframes jetSquid {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  30% {
+    transform: translateX(36px) translateY(-14px) rotate(6deg);
+  }
+  65% {
+    transform: translateX(16px) translateY(-6px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes cruiseFish {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  40% {
+    transform: translateX(-40px) translateY(12px) rotate(-3deg);
+  }
+  75% {
+    transform: translateX(-15px) translateY(-8px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes swaySeaweed {
+  0% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-3deg);
+  }
+}
+
+.anim-jelly {
+  animation: floatJelly 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.anim-squid {
+  animation: jetSquid 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.anim-abyss {
+  animation: cruiseFish 10s ease-in-out infinite;
+  will-change: transform;
+}
+
+.anim-seaweed {
+  transform-origin: bottom center;
+  animation: swaySeaweed 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes dartScatter {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  25% {
+    transform: scale(1.18) translateX(45px) rotate(-6deg);
+  }
+  60% {
+    transform: scale(1.22) translateX(110px) rotate(8deg);
+  }
+  85% {
+    transform: scale(1.05) translateX(60px) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+.anim-scatter {
+  animation: dartScatter 1.4s cubic-bezier(0.2, 0.9, 0.3, 1) !important;
+}
+
+@keyframes bubbleBurstPop {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.95;
+  }
+  60% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.anim-bubble-burst {
+  animation: bubbleBurstPop 0.8s ease-out forwards;
+}
+
+/* ============================================================ */
+/* WCAG AAA High Contrast Underwater Mode                       */
+/* ============================================================ */
+.high-contrast-mode {
+  background-color: #010812 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast-mode [role="main"] {
+  background-color: #010812 !important;
+}
+
+/* Strengthen card backings against background creatures */
+.high-contrast-mode [class*="bg-[#092947]"],
+.high-contrast-mode [class*="bg-[#082845]"],
+.high-contrast-mode [class*="bg-[#082643]"],
+.high-contrast-mode [class*="bg-[#051c31]"],
+.high-contrast-mode [class*="bg-[#061e36]"] {
+  background-color: #020c18 !important;
+  border-color: #67e8f9 !important;
+  border-width: 2px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9) !important;
+}
+
+.high-contrast-mode p,
+.high-contrast-mode span,
+.high-contrast-mode div {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.high-contrast-mode .text-slate-100,
+.high-contrast-mode .text-cyan-50,
+.high-contrast-mode .text-cyan-100 {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.high-contrast-mode .text-orange-200,
+.high-contrast-mode .text-orange-300 {
+  color: #fde047 !important; /* Vivid bright yellow for AAA contrast */
+  font-weight: 700 !important;
+}
+
+.high-contrast-mode .text-cyan-200 {
+  color: #a5f3fc !important;
+  font-weight: 600 !important;
+}
+
+/* Dim background fauna in high contrast mode to eliminate text distraction */
+.high-contrast-mode [class*="pointer-events-auto"] {
+  opacity: 0.15 !important;
+}
+
+/* Dynamic Responsive Fluid Typography using clamp() (WCAG AAA compliant) */
+.fluid-title-hero {
+  font-size: clamp(2.25rem, 6vw + 0.5rem, 4.5rem);
+  line-height: 1.08;
+}
+
+.fluid-title-section {
+  font-size: clamp(1.6rem, 3.5vw + 0.4rem, 2.5rem);
+  line-height: 1.18;
+}
+
+.fluid-subtitle {
+  font-size: clamp(0.875rem, 1.4vw + 0.3rem, 1.15rem);
+  line-height: 1.5;
+}
+
+.fluid-countdown-num {
+  font-size: clamp(1.35rem, 2.8vw + 0.2rem, 2.25rem);
+  line-height: 1;
+}
+
+.fluid-card-title {
+  font-size: clamp(1.05rem, 1.8vw + 0.2rem, 1.35rem);
+  line-height: 1.3;
+}
+
+.fluid-badge {
+  font-size: clamp(0.72rem, 0.9vw + 0.25rem, 0.875rem);
+  line-height: 1.25;
+}
+
