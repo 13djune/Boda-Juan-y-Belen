@@ -13,7 +13,7 @@ export function MenuSection() {
         {/* Header badge */}
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-2 flex-wrap">
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#02243a] text-cyan-200 fluid-badge font-bold shadow-xs border border-cyan-400/40">
+            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#07365a]/90 text-cyan-200 fluid-badge font-bold shadow-xs border border-cyan-400/50">
               <Sparkles className="w-3.5 h-3.5 text-orange-400" aria-hidden="true" />
               <span>Gastronomía Mediterránea • Banquete</span>
             </div>
@@ -38,7 +38,7 @@ export function MenuSection() {
         </div>
 
         {/* 1. SECCIÓN CÓCTEL: Grid compacto 2x2 sin huecos */}
-        <div className="bg-[#061e36]/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-cyan-500/25 shadow-xl shadow-black/30 space-y-4">
+        <div className="bg-[#08365c]/85 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-cyan-400/35 shadow-xl shadow-cyan-950/30 space-y-4">
           <div className="flex items-center justify-between border-b border-cyan-500/20 pb-3 flex-wrap gap-2">
             <div className="flex items-center gap-2.5">
               <span className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/30">
@@ -63,7 +63,7 @@ export function MenuSection() {
             {MENU_COCKTAIL.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#04172a] p-3.5 rounded-2xl border border-cyan-500/20 hover:border-orange-400/50 transition-colors flex flex-col justify-between space-y-1.5"
+                className="bg-[#06294a]/90 p-3.5 rounded-2xl border border-cyan-400/25 hover:border-orange-400/50 transition-colors flex flex-col justify-between space-y-1.5"
               >
                 <div className="flex items-start justify-between gap-2">
                   <div className="font-bold text-sm text-white">
@@ -84,7 +84,7 @@ export function MenuSection() {
         </div>
 
         {/* 2. SECCIÓN BANQUETE PRINCIPAL: Grid simétrico 2x3 sin huecos */}
-        <div className="bg-[#061e36]/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-cyan-500/25 shadow-xl shadow-black/30 space-y-4">
+        <div className="bg-[#08365c]/85 backdrop-blur-md rounded-3xl p-5 sm:p-6 border border-cyan-400/35 shadow-xl shadow-cyan-950/30 space-y-4">
           <div className="flex items-center justify-between border-b border-cyan-500/20 pb-3 flex-wrap gap-2">
             <div className="flex items-center gap-2.5">
               <span className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/30">
@@ -109,7 +109,7 @@ export function MenuSection() {
             {MENU_BANQUET.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#04172a] p-3.5 rounded-2xl border border-cyan-500/20 hover:border-orange-400/50 transition-colors flex flex-col justify-between space-y-1.5"
+                className="bg-[#06294a]/90 p-3.5 rounded-2xl border border-cyan-400/25 hover:border-orange-400/50 transition-colors flex flex-col justify-between space-y-1.5"
               >
                 <div className="flex items-start justify-between gap-2">
                   <div className="font-bold text-sm text-white">
@@ -128,7 +128,7 @@ export function MenuSection() {
         </div>
 
         {/* 3. ALERTA DIETÉTICA Y MENÚS ADAPTADOS */}
-        <div className="p-4 rounded-2xl bg-[#092947]/95 border border-orange-400/50 text-cyan-100 flex items-start gap-3 text-xs sm:text-sm leading-relaxed shadow-lg">
+        <div className="p-4 rounded-2xl bg-[#093d67]/90 border border-orange-400/60 text-cyan-50 flex items-start gap-3 text-xs sm:text-sm leading-relaxed shadow-lg">
           <Heart className="w-5 h-5 text-orange-400 shrink-0 mt-0.5 animate-pulse" aria-hidden="true" />
           <div>
             <span className="font-bold text-orange-300">¿Tienes alguna alergia, celiaquía o intolerancia? </span>

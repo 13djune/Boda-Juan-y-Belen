@@ -42,32 +42,32 @@ export function ParallaxBackground() {
         aria-hidden="true"
         className="fixed inset-0 pointer-events-none -z-10 overflow-hidden"
       >
-        {/* Base sunlit Mediterranean gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a3556] via-[#04334c] via-45% to-[#01111e]" />
+        {/* Tropical light turquoise to deep dark ocean gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#5eead4] via-[#22d3ee] via-15% via-[#0ea5e9] via-38% via-[#0284c7] via-60% via-[#0369a1] via-80% to-[#021324]" />
 
-        {/* Dynamic abyss darkening overlay */}
+        {/* Dynamic abyss darkening overlay as user scrolls down - smooth curve that keeps top bright */}
         <div
-          className="absolute inset-0 transition-opacity duration-100 ease-out will-change-[opacity]"
+          className="absolute inset-0 transition-opacity duration-150 ease-out will-change-[opacity]"
           style={{
-            backgroundColor: '#00040a',
-            opacity: Math.min(progress * 0.95, 0.95),
+            backgroundColor: '#010914',
+            opacity: Math.min(Math.pow(progress, 1.35) * 0.94, 0.94),
           }}
         />
 
-        {/* Deep abyss vignette gradient */}
+        {/* Deep abyss vignette gradient at bottom (fades in as user scrolls) */}
         <div
-          className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent transition-opacity duration-100"
-          style={{ opacity: Math.min(progress * 1.3, 1) }}
+          className="absolute inset-0 bg-gradient-to-t from-[#000408]/95 via-[#010f1e]/60 to-transparent transition-opacity duration-150"
+          style={{ opacity: Math.min(progress * 0.95, 0.95) }}
         />
 
-        {/* Surface sun caustic flare */}
+        {/* Surface tropical turquoise & warm Mediterranean golden sunshine glow */}
         <div
-          className="absolute -top-24 left-1/2 -translate-x-1/2 w-[54rem] h-[36rem] bg-gradient-to-b from-sky-300/35 via-teal-400/15 to-transparent rounded-full blur-3xl transition-opacity duration-200"
-          style={{ opacity: Math.max(1 - progress * 2.2, 0) }}
+          className="absolute -top-16 left-1/2 -translate-x-1/2 w-[64rem] h-[40rem] bg-gradient-to-b from-amber-200/50 via-teal-200/40 to-transparent rounded-full blur-3xl transition-opacity duration-200 pointer-events-none"
+          style={{ opacity: Math.max(1 - progress * 2.0, 0) }}
         />
         <div
-          className="absolute top-10 right-[10%] w-80 h-80 rounded-full bg-gradient-to-br from-orange-500/25 via-amber-400/15 to-transparent blur-3xl transition-opacity duration-200"
-          style={{ opacity: Math.max(1 - progress * 2.5, 0) }}
+          className="absolute top-2 right-[8%] w-88 h-88 rounded-full bg-gradient-to-br from-amber-300/40 via-orange-300/30 to-transparent blur-3xl transition-opacity duration-200 pointer-events-none"
+          style={{ opacity: Math.max(1 - progress * 2.2, 0) }}
         />
       </div>
 

@@ -10,16 +10,16 @@ export function FamilyPreWedding() {
       aria-label="Información exclusiva de la cena del viernes para familiares"
       className="my-6 px-4 sm:px-6 lg:px-8 max-w-5xl w-full mx-auto relative z-10"
     >
-      <div className="relative overflow-hidden rounded-3xl bg-[#082a4c]/95 backdrop-blur-md text-white p-6 sm:p-8 shadow-2xl shadow-black/40 border-2 border-orange-400/70 space-y-5">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0c4a6e]/90 via-[#0a3a5e]/90 to-[#072a47]/95 backdrop-blur-xl text-white p-6 sm:p-8 shadow-2xl shadow-cyan-950/40 border-2 border-orange-400/80 space-y-5">
         {/* Glow backdrop with warm orange accent */}
         <div
           aria-hidden="true"
-          className="absolute -right-16 -top-16 w-60 h-60 bg-orange-500/20 rounded-full blur-3xl pointer-events-none"
+          className="absolute -right-16 -top-16 w-60 h-60 bg-orange-500/25 rounded-full blur-3xl pointer-events-none"
         />
 
         {/* Top badge row */}
         <div className="flex items-center justify-between flex-wrap gap-2">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#04192d] border border-orange-400/60 fluid-badge font-bold tracking-wider uppercase text-orange-300 shadow-xs">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#042038] border border-orange-400/60 fluid-badge font-bold tracking-wider uppercase text-orange-300 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-orange-400" aria-hidden="true" />
             <span>Exclusivo Familiares • Código FAMILIA27</span>
           </div>
@@ -51,7 +51,7 @@ export function FamilyPreWedding() {
         {/* Feature Cards Grid (Details of the Friday Dinner) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
           {/* Schedule & Atmosphere */}
-          <div className="bg-[#04172a]/95 rounded-2xl p-4 sm:p-5 border border-cyan-500/30 hover:border-orange-400/60 transition-colors space-y-2.5">
+          <div className="bg-[#072d4c]/90 rounded-2xl p-4 sm:p-5 border border-cyan-400/40 hover:border-orange-400/70 transition-colors space-y-2.5 shadow-sm">
             <div className="flex items-center gap-2.5 text-orange-300 font-bold text-sm sm:text-base">
               <div className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/40">
                 <MoonStar className="w-5 h-5 text-orange-400" aria-hidden="true" />
@@ -62,16 +62,16 @@ export function FamilyPreWedding() {
             </div>
 
             <div className="text-sm font-bold text-orange-200">
-              {preWedding.dinnerTime}
+              Viernes 16 • 20:30 h en el Faro de Mazarrón
             </div>
 
             <p className="text-xs sm:text-sm text-slate-200 font-normal leading-relaxed">
-              Comenzaremos reuniéndonos al caer la tarde para brindar con cócteles y disfrutar de la puesta de sol dorada sobre la bahía de Mazarrón.
+              Cena familiar el viernes 16 a las 20:30 en el faro de Mazarrón. Comenzaremos reuniéndonos al atardecer frente al mar para cenar juntos, brindar y disfrutar en familia antes del gran día.
             </p>
           </div>
 
           {/* Gastronomy & Bites */}
-          <div className="bg-[#04172a]/95 rounded-2xl p-4 sm:p-5 border border-cyan-500/30 hover:border-orange-400/60 transition-colors space-y-2.5">
+          <div className="bg-[#072d4c]/90 rounded-2xl p-4 sm:p-5 border border-cyan-400/40 hover:border-orange-400/70 transition-colors space-y-2.5 shadow-sm">
             <div className="flex items-center gap-2.5 text-orange-300 font-bold text-sm sm:text-base">
               <div className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/40">
                 <Utensils className="w-5 h-5 text-orange-400" aria-hidden="true" />

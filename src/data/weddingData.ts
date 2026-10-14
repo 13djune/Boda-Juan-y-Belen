@@ -1,6 +1,6 @@
 import { TimelineEvent, MenuItem } from '../types/wedding';
 
-export const WEDDING_DATE = new Date('2027-07-17T12:30:00+02:00');
+export const WEDDING_DATE = new Date('2027-07-17T20:30:00+02:00');
 
 export const WEDDING_INFO = {
   couple: {
@@ -9,7 +9,7 @@ export const WEDDING_INFO = {
     fullName: 'Juan & Belén',
     tagline: '¡Nos casamos!',
     dateFormatted: 'Sábado, 17 de Julio de 2027',
-    time: '12:30 h',
+    time: '20:30 h',
     venue: 'Faro Puerto de Mazarrón "Farero Santiago Acarreta Vicondoa"',
     venueShort: 'Faro de Mazarrón',
     address: 'C. Cta. del Faro, 30860 Puerto de Mazarrón, Murcia, España',
@@ -23,17 +23,17 @@ export const WEDDING_INFO = {
   preWedding: {
     date: 'Viernes, 16 de julio de 2027',
     dayFormatted: 'Viernes 16 de Julio de 2027',
-    time: '21:00 h',
+    time: '20:30 h',
     title: 'Cena Familiar de Bienvenida • Viernes 16 de Julio',
     subtitle: 'El inicio de nuestra boda reservado en exclusiva para la familia',
-    dinnerTime: '21:00 h • Cena de tapas marineras y brindis',
-    location: 'Terrazas del Faro de Puerto de Mazarrón',
+    dinnerTime: '20:30 h • Cena familiar en el Faro de Mazarrón',
+    location: 'Faro de Mazarrón',
     address: 'C. Cta. del Faro, 30860 Puerto de Mazarrón, Murcia, España',
-    dressCode: 'Casual Chic Veraniego (tonos claros y frescos)',
+    dressCode: 'Estilo fresco y relajado (no hace falta chaqueta ni corbata, zapato cómodo)',
     description:
-      'Un encuentro íntimo y especial reservado exclusivamente para nuestra familia más cercana. Nos reuniremos el viernes por la noche frente al mar para cenar juntos, brindar y comenzar a celebrar este gran fin de semana en familia antes del gran día del sábado.',
+      'Cena familiar el viernes 16 a las 20:30 en el faro de Mazarrón. Un encuentro íntimo y especial reservado exclusivamente para la familia para reunirnos frente al mar, cenar juntos, brindar y comenzar a celebrar este gran fin de semana antes del gran día del sábado.',
     menuHighlights:
-      'Degustación de tapas marineras de la bahía, embutidos ibéricos, aperitivos calientes, vinos de la tierra y sobremesa junto a la brisa mediterránea.',
+      'Degustación de tapas marineras de la bahía, aperitivos calientes y fríos, vinos de la tierra y sobremesa junto a la brisa mediterránea.',
   },
   giftsHeartfelt: {
     title: 'Un detalle que nazca del corazón',
@@ -53,12 +53,12 @@ export const WEDDING_INFO = {
 
 export const FAMILY_FRIDAY_TIMELINE_EVENT: TimelineEvent = {
   id: 't0-family',
-  time: '21:00',
+  time: '20:30',
   dayLabel: 'Viernes 16 Julio',
-  title: 'Cena Familiar de Bienvenida',
+  title: 'Cena Familiar en el Faro de Mazarrón',
   description:
-    'Encuentro íntimo y distendido exclusivo para la familia: cena de tapas marineras y brindis con vistas al mar antes del gran día.',
-  location: 'Terrazas del Faro de Mazarrón',
+    'Cena familiar el viernes 16 a las 20:30 en el faro de Mazarrón. Encuentro íntimo y distendido exclusivo para la familia frente al mar para brindar y cenar antes del gran día.',
+  location: 'Faro de Mazarrón',
   iconName: 'utensils',
   badge: 'Exclusivo Familia',
 };
@@ -66,58 +66,50 @@ export const FAMILY_FRIDAY_TIMELINE_EVENT: TimelineEvent = {
 export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     id: 't1',
-    time: '12:30',
-    title: 'Llegada y Bienvenida',
+    time: '20:30',
+    title: 'Boda en el Faro de Mazarrón',
     description:
-      'Recepción en el mirador con limonada fresca, copas de bienvenida y música acústica frente al Mediterráneo.',
-    location: 'Mirador del Faro',
-    iconName: 'glass',
-    badge: 'Punto de Encuentro',
-  },
-  {
-    id: 't2',
-    time: '13:00',
-    title: 'Ceremonia Civil Frente al Mar',
-    description:
-      'Nuestros votos de amor y el gran "sí, quiero" arropados por vosotros con la brisa marina.',
-    location: 'Plaza del Faro de Mazarrón',
+      'Boda el Sábado 17 a las 20:30 en el faro de Mazarrón. Llegada de invitados y ceremonia con la puesta de sol mediterránea. Si no queréis perderos cosas, ¡sed puntuales!',
+    location: 'Faro de Mazarrón',
     iconName: 'heart',
     badge: '¡El Gran Sí!',
   },
   {
-    id: 't3',
-    time: '14:15',
-    title: 'Cóctel Marinero al Sol',
+    id: 't2',
+    time: '21:30',
+    title: 'Cóctel & Aperitivos Marineros',
     description:
-      'Aperitivos de la zona, cortador de jamón ibérico, cerveza fría y música en directo en las terrazas.',
-    location: 'Terrazas Marinas del Faro',
+      'Aperitivos de la bahía, jamón ibérico, copas frías y música en directo en las terrazas del faro.',
+    location: 'Terrazas del Faro de Mazarrón',
     iconName: 'glass',
+    badge: 'Cóctel',
+  },
+  {
+    id: 't3',
+    time: '22:30',
+    title: 'Cena y Banquete Nupcial',
+    description:
+      'Cena bajo las estrellas frente al mar, menú adaptado a cualquier alergia o intolerancia alimentaria, y brindis inolvidables.',
+    location: 'Salón Panorámico del Faro',
+    iconName: 'utensils',
+    badge: 'Banquete',
   },
   {
     id: 't4',
-    time: '16:00',
-    title: 'Banquete Nupcial',
-    description:
-      'Comida sentados con los sabores más ricos de nuestra tierra, brindis y momentos muy emotivos.',
-    location: 'Salón Panorámico Mirador',
-    iconName: 'utensils',
-  },
-  {
-    id: 't5',
-    time: '19:30',
+    time: '00:30',
     title: 'Apertura de Baile y Fiesta',
     description:
-      'Primer baile de Juan y Belén, cócteles, barra libre, rincón de fotos y DJ hasta bien entrada la noche.',
+      'Baile de Juan y Belén, barra libre, rincón de fotos y DJ hasta la madrugada. Recordad: ¡zapato cómodo para bailar sin parar!',
     location: 'Terraza de las Estrellas',
     iconName: 'music',
     badge: '¡A Bailar!',
   },
   {
-    id: 't6',
-    time: '02:30',
+    id: 't5',
+    time: '04:00',
     title: 'Recena de Madrugada & Cierre',
     description:
-      'Churritos calientes con chocolate y bocaditos recién hechos para despedir una noche inolvidable.',
+      'Churritos calientes con chocolate para despedir una noche mágica frente al mar de Mazarrón.',
     location: 'Faro de Mazarrón',
     iconName: 'heart',
   },

@@ -18,7 +18,6 @@ import { GiftsSection } from './components/GiftsSection';
 import { RsvpSection } from './components/RsvpSection';
 import { FooterSection } from './components/FooterSection';
 import { DepthGauge } from './components/DepthGauge';
-import { AccessibilityToggle } from './components/AccessibilityToggle';
 import { CtaBubbleEmitter } from './components/CtaBubbleEmitter';
 
 export default function App() {
@@ -40,26 +39,6 @@ export default function App() {
   });
 
   const [activeSection, setActiveSection] = useState<string>('inicio');
-
-  const [isHighContrast, setIsHighContrast] = useState<boolean>(() => {
-    try {
-      return localStorage.getItem('juan_belen_high_contrast') === 'true';
-    } catch {
-      return false;
-    }
-  });
-
-  const handleToggleHighContrast = () => {
-    setIsHighContrast((prev) => {
-      const next = !prev;
-      try {
-        localStorage.setItem('juan_belen_high_contrast', String(next));
-      } catch {
-        // ignore
-      }
-      return next;
-    });
-  };
 
   // Sync session storage
   const handleUnlock = (type: AccessType, codeUsed: string) => {
@@ -135,9 +114,7 @@ export default function App() {
   return (
     <div
       role="main"
-      className={`relative min-h-screen bg-[#071d33] text-white font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden ${
-        isHighContrast ? 'high-contrast-mode' : ''
-      }`}
+      className="relative min-h-screen bg-transparent text-white font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden"
     >
       {/* Animated Parallax Background Layers */}
       <ParallaxBackground />
@@ -148,12 +125,6 @@ export default function App() {
       {/* Cursor hover micro-bubbles over CTAs */}
       <CtaBubbleEmitter />
 
-      {/* Floating Accessibility Toggle Button */}
-      <AccessibilityToggle
-        isHighContrast={isHighContrast}
-        onToggle={handleToggleHighContrast}
-      />
-
       {/* Navigation Bars */}
       <Navigation
         accessType={accessType}
@@ -161,8 +132,6 @@ export default function App() {
         onResetCode={handleResetCode}
         activeSection={activeSection}
         onNavigate={handleNavigate}
-        isHighContrast={isHighContrast}
-        onToggleHighContrast={handleToggleHighContrast}
       />
 
       {/* Hero Section */}

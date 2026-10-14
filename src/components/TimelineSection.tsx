@@ -111,7 +111,7 @@ export function TimelineSection({ accessType }: TimelineSectionProps) {
         {/* Header badge */}
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-2 flex-wrap">
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#032038] text-cyan-200 fluid-badge font-bold shadow-xs border border-cyan-400/40">
+            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#073254]/90 text-cyan-200 fluid-badge font-bold shadow-xs border border-cyan-400/50">
               <Sparkles className="w-3.5 h-3.5 text-orange-400" aria-hidden="true" />
               <span>Momentos Clave • 17 de Julio</span>
             </div>
@@ -136,10 +136,10 @@ export function TimelineSection({ accessType }: TimelineSectionProps) {
 
           {/* Quick-Glance Milestone Progress Line */}
           <div className="pt-3 pb-1 overflow-x-auto no-scrollbar">
-            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-2xl bg-[#041a2e]/90 border border-cyan-500/30 shadow-md">
+            <div className="inline-flex items-center gap-2 px-3 py-2 rounded-2xl bg-[#073456]/90 border border-cyan-400/40 shadow-md">
               {events.map((evt, idx) => (
                 <div key={evt.id} className="flex items-center gap-2">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#07243e] text-xs font-mono font-bold text-cyan-200 border border-cyan-500/30 whitespace-nowrap">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#09406b] text-xs font-mono font-bold text-cyan-200 border border-cyan-400/40 whitespace-nowrap">
                     <span className="w-2 h-2 rounded-full bg-orange-400" />
                     <strong className="text-white">{evt.time}</strong> {evt.title.split(' ')[0]}
                   </span>
@@ -160,7 +160,7 @@ export function TimelineSection({ accessType }: TimelineSectionProps) {
             return (
               <div
                 key={event.id}
-                className="relative overflow-hidden rounded-3xl bg-[#082643]/90 backdrop-blur-md p-5 sm:p-6 shadow-xl shadow-black/40 border-2 border-cyan-500/30 hover:border-orange-400/70 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+                className="relative overflow-hidden rounded-3xl bg-[#08355a]/85 backdrop-blur-md p-5 sm:p-6 shadow-xl shadow-cyan-950/30 border-2 border-cyan-400/40 hover:border-orange-400/70 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
               >
                 {/* Visual Ambient Glow Corner */}
                 <div

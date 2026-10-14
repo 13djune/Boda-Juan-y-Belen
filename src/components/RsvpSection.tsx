@@ -114,7 +114,7 @@ ${
 
   return (
     <div
-      id="confirmar"
+      id="confirmacion"
       role="region"
       aria-label="Confirmación de asistencia a la boda"
       className="py-12 px-4 sm:px-6 lg:px-8 relative z-10 text-white w-full"
@@ -125,12 +125,12 @@ ${
           <div className="flex items-center justify-center gap-2 flex-wrap">
             <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#021323] text-cyan-200 fluid-badge font-bold shadow-xs border border-cyan-400/40">
               <Sparkles className="w-3.5 h-3.5 text-orange-400" aria-hidden="true" />
-              <span>Confirmación de Asistencia • RSVP</span>
+              <span>Confirmación de Asistencia</span>
             </div>
 
             <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-orange-500/25 text-orange-200 border border-orange-400/60 fluid-badge font-bold uppercase tracking-wider shadow-2xs">
               <CheckCircle2 className="w-3.5 h-3.5 text-orange-400" aria-hidden="true" />
-              <span>RSVP</span>
+              <span>Confirmar</span>
             </div>
           </div>
 
@@ -332,10 +332,10 @@ ${
               <div className="p-4 rounded-2xl bg-[#04172a] border border-orange-400/50 space-y-2.5 shadow-md">
                 <div className="flex items-center gap-2 text-orange-300 font-bold text-xs uppercase tracking-wider">
                   <Utensils className="w-4 h-4 text-orange-400" aria-hidden="true" />
-                  <span>Cena Familiar de Bienvenida • Viernes 16 (21:00 h)</span>
+                  <span>Cena Familiar • Viernes 16 a las 20:30 en el Faro de Mazarrón</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
-                  ¿Nos acompañarás también en la <strong>Cena Familiar</strong> del viernes 16 en las terrazas del Faro antes del gran día?
+                  ¿Nos acompañarás también en la <strong>Cena familiar el viernes 16 a las 20:30 en el faro de Mazarrón</strong> antes del gran día?
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <label
