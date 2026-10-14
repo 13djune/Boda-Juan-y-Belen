@@ -114,7 +114,7 @@ export default function App() {
   return (
     <div
       role="main"
-      className="relative min-h-screen bg-transparent text-white font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden"
+      className="relative min-h-screen bg-transparent text-white font-sans selection:bg-orange-500 selection:text-white overflow-x-hidden pb-28 sm:pb-24"
     >
       {/* Animated Parallax Background Layers */}
       <ParallaxBackground />

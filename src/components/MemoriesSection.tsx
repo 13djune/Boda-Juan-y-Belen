@@ -7,19 +7,31 @@ export function MemoriesSection() {
   const [memories, setMemories] = useState<UploadedMemory[]>([
     {
       id: 'demo-1',
-      url: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80',
-      name: 'Atardecer en Mazarrón',
+      url: '',
+      name: 'Atardecer en el Faro de Mazarrón',
       timestamp: 'Recuerdo',
     },
     {
       id: 'demo-2',
-      url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=600&q=80',
-      name: 'Vistas al Mediterráneo',
+      url: '',
+      name: 'Vistas a la Bahía del Mediterráneo',
+      timestamp: 'Recuerdo',
+    },
+    {
+      id: 'demo-3',
+      url: '',
+      name: 'Brindis y Celebración frente al Mar',
+      timestamp: 'Recuerdo',
+    },
+    {
+      id: 'demo-4',
+      url: '',
+      name: 'Noche de Estrellas en Mazarrón',
       timestamp: 'Recuerdo',
     },
   ]);
 
-  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [selectedPhoto, setSelectedPhoto] = useState<UploadedMemory | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleFilesUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -76,7 +88,7 @@ export function MemoriesSection() {
         </div>
 
         {/* Ocean Glass Container Box */}
-        <div className="bg-[#092947]/85 backdrop-blur-md rounded-3xl p-4 sm:p-6 shadow-xl shadow-black/30 border border-cyan-500/25 space-y-4">
+        <div className="bg-[#0a426e]/90 backdrop-blur-md rounded-3xl p-4 sm:p-6 shadow-xl shadow-black/40 border-2 border-cyan-400/40 space-y-4">
           {/* Hidden file input */}
           <input
             ref={fileInputRef}
@@ -104,7 +116,7 @@ export function MemoriesSection() {
               href={WEDDING_INFO.albumLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#061e36] hover:bg-[#0a2f52] border border-cyan-400/40 text-cyan-100 hover:text-white font-bold text-xs sm:text-sm shadow-xs flex items-center justify-center gap-1.5 transition-all duration-200 active:scale-95 hover:-translate-y-0.5"
+              className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-[#073052] hover:bg-[#093c66] border border-cyan-400/40 text-cyan-100 hover:text-white font-bold text-xs sm:text-sm shadow-xs flex items-center justify-center gap-1.5 transition-all duration-200 active:scale-95 hover:-translate-y-0.5"
             >
               <ImageIcon className="w-4 h-4 text-orange-400" aria-hidden="true" />
               <span>Álbum en Google Fotos</span>
@@ -113,7 +125,7 @@ export function MemoriesSection() {
           </div>
 
           {/* Warm reminder note */}
-          <div className="bg-[#051c33]/80 p-3 rounded-2xl border border-orange-500/30 text-center flex items-center justify-center gap-2 text-xs text-orange-200 font-medium">
+          <div className="bg-[#073052]/90 p-3 rounded-2xl border border-orange-400/40 text-center flex items-center justify-center gap-2 text-xs text-orange-200 font-medium">
             <Heart className="w-4 h-4 text-orange-400 fill-orange-400 shrink-0" aria-hidden="true" />
             <span>
               Todas las fotos que subáis formarán parte de nuestro álbum de recuerdos de boda.
@@ -131,23 +143,37 @@ export function MemoriesSection() {
                 <Sparkles className="w-3.5 h-3.5 text-orange-400 animate-spin" aria-hidden="true" style={{ animationDuration: '6s' }} />
                 <span>Muro de Recuerdos ({memories.length})</span>
               </div>
-              <span className="text-[11px] text-cyan-200/80 font-medium">Toca para ampliar</span>
+              <span className="text-[11px] text-cyan-200 font-semibold">Toca para ampliar</span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              {memories.map((photo) => (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 sm:gap-3">
+              {memories.map((photo, i) => (
                 <div
                   key={photo.id}
-                  onClick={() => setSelectedPhoto(photo.url)}
-                  className="group relative aspect-square rounded-2xl overflow-hidden bg-slate-900 cursor-pointer shadow-xs hover:shadow-lg border border-cyan-500/30 hover:border-orange-400 transition-all duration-300 hover:-translate-y-1"
+                  onClick={() => setSelectedPhoto(photo)}
+                  className="group relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[#0c4a75] via-[#09395e] to-[#062440] cursor-pointer shadow-sm hover:shadow-lg border-2 border-cyan-400/35 hover:border-orange-400 transition-all duration-300 hover:-translate-y-1 flex flex-col items-center justify-center p-3 text-center"
                 >
-                  <img
-                    src={photo.url}
-                    alt={photo.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2.5">
+                  {photo.url ? (
+                    <img
+                      src={photo.url}
+                      alt={photo.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out absolute inset-0"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center justify-center gap-2 text-cyan-200">
+                      <div className="w-10 h-10 rounded-full bg-orange-500/20 border border-orange-400/50 flex items-center justify-center text-orange-300 group-hover:scale-110 transition-transform">
+                        <Camera className="w-5 h-5" />
+                      </div>
+                      <span className="text-[11px] font-bold text-white line-clamp-2 px-1">
+                        {photo.name}
+                      </span>
+                      <span className="text-[9px] uppercase tracking-wider text-amber-300 font-bold bg-[#041a2e]/60 px-2 py-0.5 rounded-full border border-cyan-400/30">
+                        Mazarrón 2027
+                      </span>
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2.5 pointer-events-none">
                     <span className="text-[11px] text-orange-200 font-bold truncate">
                       {photo.name}
                     </span>
@@ -164,11 +190,11 @@ export function MemoriesSection() {
             role="dialog"
             aria-modal="true"
             aria-label="Vista previa de foto"
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 animate-fade-in"
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 animate-fade-in"
             onClick={() => setSelectedPhoto(null)}
           >
             <div
-              className="relative max-w-lg max-h-[85vh] bg-[#092947] rounded-3xl overflow-hidden shadow-2xl border border-orange-500/40"
+              className="relative max-w-lg w-full bg-[#0a426e] rounded-3xl overflow-hidden shadow-2xl border-2 border-orange-400/60 p-5 space-y-3"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -179,11 +205,30 @@ export function MemoriesSection() {
               >
                 <X className="w-4 h-4" aria-hidden="true" />
               </button>
-              <img
-                src={selectedPhoto}
-                alt="Foto del recuerdo"
-                className="w-full h-auto max-h-[80vh] object-contain"
-              />
+
+              <div className="aspect-video w-full rounded-2xl bg-gradient-to-br from-[#0c4a75] via-[#09395e] to-[#062440] flex flex-col items-center justify-center p-4 text-center border border-cyan-400/30">
+                {selectedPhoto.url ? (
+                  <img
+                    src={selectedPhoto.url}
+                    alt={selectedPhoto.name}
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center gap-3">
+                    <div className="w-16 h-16 rounded-full bg-orange-500/20 border-2 border-orange-400/60 flex items-center justify-center text-orange-400">
+                      <Camera className="w-8 h-8" />
+                    </div>
+                    <div className="text-white font-bold text-base">{selectedPhoto.name}</div>
+                    <p className="text-xs text-cyan-100 max-w-xs">
+                      Foto del álbum de boda en el Faro de Mazarrón frente al mar.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              <div className="text-center pt-1">
+                <span className="text-xs text-orange-300 font-bold">Juan & Belén • 17 Julio 2027</span>
+              </div>
             </div>
           </div>
         )}

@@ -52,20 +52,20 @@ export function Navigation({
         role="banner"
         className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
           scrolled
-            ? 'bg-[#061c31]/95 backdrop-blur-md shadow-lg shadow-black/30 py-2 border-b border-orange-500/30'
-            : 'bg-white/50 backdrop-blur-md py-2.5 border-b border-teal-300/40 shadow-xs'
+            ? 'bg-[#082a4c]/95 backdrop-blur-md shadow-lg shadow-black/30 py-2 border-b border-orange-400/40'
+            : 'bg-white/70 backdrop-blur-md py-2 sm:py-2.5 border-b border-teal-300/50 shadow-xs'
         }`}
       >
-        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="w-full max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
           {/* Logo / Couple Names */}
           <button
             type="button"
             onClick={() => onNavigate('inicio')}
-            className="flex items-center gap-2 text-left group cursor-pointer"
+            className="flex items-center gap-1.5 sm:gap-2 text-left group cursor-pointer shrink-0"
             aria-label="Ir al inicio de la invitación de Juan y Belén"
           >
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center text-slate-950 shadow-md group-hover:scale-105 transition-transform">
-              <Sparkles className="w-4 h-4 text-slate-950" aria-hidden="true" />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-orange-500 to-amber-400 flex items-center justify-center text-slate-950 shadow-md group-hover:scale-105 transition-transform shrink-0">
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-950" aria-hidden="true" />
             </div>
             <div>
               <span className={`font-serif text-sm sm:text-base font-black tracking-wide transition-colors ${
@@ -73,30 +73,31 @@ export function Navigation({
               }`}>
                 Juan & Belén
               </span>
-              <span className={`text-[10px] block -mt-0.5 tracking-wider uppercase font-bold transition-colors ${
+              <span className={`text-[9px] sm:text-[10px] block -mt-0.5 tracking-wider uppercase font-bold transition-colors ${
                 scrolled ? 'text-orange-300' : 'text-teal-900'
               }`}>
-                17 Julio 2027 • Mazarrón
+                <span className="hidden xs:inline">17 Julio 2027 • </span>Mazarrón
               </span>
             </div>
           </button>
 
           {/* Access mode badge */}
-          <div className={`inline-flex items-center gap-1.5 pl-3 pr-1.5 py-1 rounded-full text-xs shadow-xs transition-colors ${
+          <div className={`inline-flex items-center gap-1 sm:gap-1.5 pl-2.5 sm:pl-3 pr-1 py-1 rounded-full text-xs shadow-xs transition-colors shrink-0 ${
             scrolled
-              ? 'bg-[#0a2d4d]/80 border border-orange-500/40 text-white'
-              : 'bg-white/90 border border-teal-400/60 text-teal-950'
+              ? 'bg-[#0a355c]/90 border border-orange-400/50 text-white'
+              : 'bg-white/95 border border-teal-400/70 text-teal-950'
           }`}>
-            <span className={`text-[11px] font-bold tracking-wide ${
-              scrolled ? 'text-orange-400' : 'text-orange-600'
+            <span className={`text-[10px] sm:text-[11px] font-bold tracking-wide ${
+              scrolled ? 'text-orange-300' : 'text-orange-600'
             }`}>
-              {accessType === 'family' ? 'Familia • FAMILIA27' : 'Amigos • AMIGOS27'}
+              <span className="hidden sm:inline">{accessType === 'family' ? 'Familia • ' : 'Amigos • '}</span>
+              {accessType === 'family' ? 'FAMILIA27' : 'AMIGOS27'}
             </span>
             <button
               type="button"
               onClick={onResetCode}
               className={`p-1 rounded-full transition-colors cursor-pointer ${
-                scrolled ? 'text-slate-200 hover:text-orange-400 hover:bg-white/10' : 'text-teal-700 hover:text-orange-600 hover:bg-teal-50'
+                scrolled ? 'text-slate-100 hover:text-orange-300 hover:bg-white/10' : 'text-teal-800 hover:text-orange-600 hover:bg-teal-50'
               }`}
               title="Cambiar código de acceso"
               aria-label="Cambiar código de acceso"
@@ -107,13 +108,13 @@ export function Navigation({
         </div>
       </div>
 
-      {/* Floating Bottom Navigation Bar - Ocean Glass & Vibrant Orange Highlights */}
+      {/* Floating Bottom Navigation Bar - Fully Responsive for Mobile & Desktop */}
       <div
         role="navigation"
         aria-label="Navegación rápida de la invitación"
-        className="fixed bottom-2.5 inset-x-0 z-40 px-3 flex justify-center pointer-events-none"
+        className="fixed bottom-2.5 sm:bottom-3 inset-x-0 z-40 px-2 sm:px-3 flex justify-center pointer-events-none"
       >
-        <div className="pointer-events-auto bg-[#07213b]/95 backdrop-blur-lg border border-cyan-500/30 px-2 py-1.5 rounded-full shadow-2xl shadow-black/50 flex items-center gap-1 max-w-sm w-full justify-around">
+        <div className="pointer-events-auto bg-[#072442]/95 backdrop-blur-xl border border-cyan-400/40 px-1 sm:px-2 py-1 rounded-full shadow-2xl shadow-black/60 flex items-center justify-between sm:justify-around max-w-sm sm:max-w-md w-full gap-0.5 sm:gap-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeSection === item.id;
@@ -122,18 +123,18 @@ export function Navigation({
                 key={item.id}
                 type="button"
                 onClick={() => onNavigate(item.id)}
-                className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-full transition-all text-xs cursor-pointer ${
+                className={`flex flex-col items-center justify-center py-1 px-1.5 sm:px-2.5 rounded-full transition-all text-xs cursor-pointer flex-1 min-w-0 ${
                   item.highlight
-                    ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-black shadow-md shadow-orange-950/40 px-3'
+                    ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-black shadow-md shadow-orange-950/40'
                     : isActive
-                    ? 'bg-orange-500/20 text-orange-400 font-bold border border-orange-500/40'
+                    ? 'bg-orange-500/25 text-orange-300 font-bold border border-orange-400/60'
                     : 'text-cyan-100/90 hover:text-orange-300 hover:bg-white/5'
                 }`}
                 aria-current={isActive ? 'page' : undefined}
                 aria-label={`Ir a ${item.label}`}
               >
-                <Icon className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-                <span className="text-[10px] mt-0.5 tracking-tight font-semibold">
+                <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" aria-hidden="true" />
+                <span className="text-[9px] sm:text-[10px] mt-0.5 tracking-tight font-bold truncate max-w-full">
                   {item.label}
                 </span>
               </button>

@@ -49,50 +49,50 @@ export function FamilyPreWedding() {
         </p>
 
         {/* Feature Cards Grid (Details of the Friday Dinner) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 pt-1">
           {/* Schedule & Atmosphere */}
-          <div className="bg-[#072d4c]/90 rounded-2xl p-4 sm:p-5 border border-cyan-400/40 hover:border-orange-400/70 transition-colors space-y-2.5 shadow-sm">
+          <div className="bg-[#0b4774]/90 rounded-2xl p-4 sm:p-5 border-2 border-cyan-400/50 hover:border-orange-400 transition-colors space-y-2.5 shadow-md">
             <div className="flex items-center gap-2.5 text-orange-300 font-bold text-sm sm:text-base">
-              <div className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/40">
-                <MoonStar className="w-5 h-5 text-orange-400" aria-hidden="true" />
+              <div className="p-2 rounded-xl bg-orange-500/25 text-orange-300 border border-orange-400/50">
+                <MoonStar className="w-5 h-5 text-orange-300" aria-hidden="true" />
               </div>
               <div role="heading" aria-level={3} className="text-white font-bold text-base">
                 Horario & Encuentro
               </div>
             </div>
 
-            <div className="text-sm font-bold text-orange-200">
-              Viernes 16 • 20:30 h en el Faro de Mazarrón
+            <div className="text-sm font-black text-amber-300 flex items-center gap-1.5">
+              <span>Viernes 16 • 20:30 h en el Faro de Mazarrón</span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-200 font-normal leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed">
               Cena familiar el viernes 16 a las 20:30 en el faro de Mazarrón. Comenzaremos reuniéndonos al atardecer frente al mar para cenar juntos, brindar y disfrutar en familia antes del gran día.
             </p>
           </div>
 
           {/* Gastronomy & Bites */}
-          <div className="bg-[#072d4c]/90 rounded-2xl p-4 sm:p-5 border border-cyan-400/40 hover:border-orange-400/70 transition-colors space-y-2.5 shadow-sm">
+          <div className="bg-[#0b4774]/90 rounded-2xl p-4 sm:p-5 border-2 border-cyan-400/50 hover:border-orange-400 transition-colors space-y-2.5 shadow-md">
             <div className="flex items-center gap-2.5 text-orange-300 font-bold text-sm sm:text-base">
-              <div className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/40">
-                <Utensils className="w-5 h-5 text-orange-400" aria-hidden="true" />
+              <div className="p-2 rounded-xl bg-orange-500/25 text-orange-300 border border-orange-400/50">
+                <Utensils className="w-5 h-5 text-orange-300" aria-hidden="true" />
               </div>
               <div role="heading" aria-level={3} className="text-white font-bold text-base">
                 Cena de Tapas & Brindis
               </div>
             </div>
 
-            <div className="text-sm font-bold text-orange-200">
+            <div className="text-sm font-black text-amber-300">
               Gastronomía relajada marinera
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-200 font-normal leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed">
               {preWedding.menuHighlights}
             </p>
           </div>
         </div>
 
         {/* Practical details footer */}
-        <div className="pt-3 border-t border-cyan-500/25 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm text-orange-200 font-medium">
+        <div className="pt-3 border-t border-cyan-400/30 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs sm:text-sm text-orange-200 font-semibold">
           <div className="flex items-center gap-1.5">
             <MapPin className="w-4 h-4 text-orange-400 shrink-0" aria-hidden="true" />
             <span className="font-bold text-white">Lugar: </span>

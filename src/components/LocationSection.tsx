@@ -90,88 +90,88 @@ export function LocationSection() {
           {/* Practical Arrival Details (5 columns on desktop) */}
           <div className="lg:col-span-5 flex flex-col justify-between gap-4">
             {/* Parking */}
-            <div className="bg-[#08355a]/85 backdrop-blur-md rounded-3xl p-5 border border-cyan-400/35 shadow-lg hover:border-orange-400/50 transition-all flex-1">
+            <div className="bg-[#0a426e]/90 backdrop-blur-md rounded-3xl p-5 border-2 border-cyan-400/40 shadow-lg hover:border-orange-400/60 transition-all flex-1">
               <div className="flex items-center gap-2 text-white font-bold text-base mb-2">
-                <div className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                <div className="p-2 rounded-xl bg-orange-500/25 text-orange-300 border border-orange-400/40">
                   <Car className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div role="heading" aria-level={3} className="text-base font-bold text-white">
                   Aparcamiento
                 </div>
               </div>
-              <div className="text-sm text-slate-100 leading-relaxed font-normal">
-                Disponéis de <strong>zonas de estacionamiento señalizadas</strong> en los
+              <div className="text-sm text-white font-medium leading-relaxed">
+                Disponéis de <strong className="text-amber-300">zonas de estacionamiento señalizadas</strong> en los
                 alrededores de la <strong>Cuesta del Faro</strong> y en la explanada de acceso.
                 El acceso a pie desde los parkings principales es cómodo y con vistas directas a la costa.
               </div>
             </div>
 
             {/* Hotels */}
-            <div className="bg-[#08355a]/85 backdrop-blur-md rounded-3xl p-5 border border-cyan-400/35 shadow-lg hover:border-orange-400/50 transition-all flex-1">
+            <div className="bg-[#0a426e]/90 backdrop-blur-md rounded-3xl p-5 border-2 border-cyan-400/40 shadow-lg hover:border-orange-400/60 transition-all flex-1">
               <div className="flex items-center gap-2 text-white font-bold text-base mb-2">
-                <div className="p-2 rounded-xl bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                <div className="p-2 rounded-xl bg-orange-500/25 text-orange-300 border border-orange-400/40">
                   <Hotel className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div role="heading" aria-level={3} className="text-base font-bold text-white">
                   Alojamiento Cercano
                 </div>
               </div>
-              <div className="text-sm text-slate-100 leading-relaxed font-normal">
-                Hoteles y apartamentos vacacionales en el <strong>paseo marítimo del Puerto de Mazarrón</strong> a
+              <div className="text-sm text-white font-medium leading-relaxed">
+                Hoteles y apartamentos vacacionales en el <strong className="text-amber-300">paseo marítimo del Puerto de Mazarrón</strong> a
                 solo <strong>5-10 minutos</strong> del faro, ideales para descansar después de la fiesta sin necesidad de largos desplazamientos.
               </div>
             </div>
           </div>
         </div>
 
-        {/* Essential Guest Information & Recommendations Box */}
-        <div className="bg-[#07243e]/90 backdrop-blur-md rounded-3xl p-5 sm:p-6 border-2 border-orange-400/50 shadow-xl space-y-4">
+        {/* Essential Guest Information & Recommendations Box - Clear, luminous, and legible */}
+        <div className="bg-[#0a426e]/95 backdrop-blur-md rounded-3xl p-4 sm:p-6 border-2 border-orange-400/70 shadow-2xl space-y-4">
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <div className="flex items-center gap-2 text-orange-300 font-bold text-sm uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-amber-300 font-black text-sm uppercase tracking-wider">
               <Compass className="w-4 h-4 text-orange-400" aria-hidden="true" />
               <span>Recomendaciones Importantes para los Invitados</span>
             </div>
-            <span className="text-xs text-cyan-200 font-medium">Boda en el Faro de Mazarrón</span>
+            <span className="text-xs text-cyan-200 font-bold bg-[#072f52] px-2.5 py-0.5 rounded-full border border-cyan-400/40">Faro de Mazarrón</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs sm:text-sm">
-            <div className="p-3.5 rounded-2xl bg-[#041a2f] border border-cyan-500/30 space-y-1">
-              <div className="text-orange-400 font-bold flex items-center gap-1.5">
+            <div className="p-4 rounded-2xl bg-[#073052] border-2 border-cyan-400/40 space-y-1.5 shadow-sm">
+              <div className="text-amber-300 font-black flex items-center gap-1.5 text-sm">
                 <span>⏱️</span>
                 <span>¡Puntualidad!</span>
               </div>
-              <p className="text-slate-200 leading-relaxed">
-                <strong>Si no queréis perderos cosas ser puntuales</strong>. Comenzaremos a las 20:30 h con la puesta de sol.
+              <p className="text-slate-100 font-medium leading-relaxed">
+                <strong className="text-white">Si no queréis perderos cosas ser puntuales</strong>. Comenzaremos a las <strong>20:30 h</strong> con la puesta de sol frente al mar.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-[#041a2f] border border-cyan-500/30 space-y-1">
-              <div className="text-teal-300 font-bold flex items-center gap-1.5">
+            <div className="p-4 rounded-2xl bg-[#073052] border-2 border-cyan-400/40 space-y-1.5 shadow-sm">
+              <div className="text-teal-200 font-black flex items-center gap-1.5 text-sm">
                 <span>👔</span>
-                <span>Código de vestimenta</span>
+                <span>Vestimenta</span>
               </div>
-              <p className="text-slate-200 leading-relaxed">
-                <strong>No hace falta llevar chaqueta y corbata</strong>. Venid elegantes pero frescos y veraniegos.
+              <p className="text-slate-100 font-medium leading-relaxed">
+                <strong className="text-white">No hace falta llevar chaqueta y corbata</strong>. Venid elegantes pero frescos y cómodos para el verano marinero.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-[#041a2f] border border-cyan-500/30 space-y-1">
-              <div className="text-amber-300 font-bold flex items-center gap-1.5">
+            <div className="p-4 rounded-2xl bg-[#073052] border-2 border-cyan-400/40 space-y-1.5 shadow-sm">
+              <div className="text-amber-300 font-black flex items-center gap-1.5 text-sm">
                 <span>👟</span>
-                <span>Calzado recomendado</span>
+                <span>Calzado</span>
               </div>
-              <p className="text-slate-200 leading-relaxed">
-                <strong>Se recomienda ir con zapato cómodo</strong> para disfrutar de los miradores y bailar toda la noche.
+              <p className="text-slate-100 font-medium leading-relaxed">
+                <strong className="text-white">Se recomienda ir con zapato cómodo</strong> para pasear por los miradores del faro y bailar toda la noche.
               </p>
             </div>
 
-            <div className="p-3.5 rounded-2xl bg-[#041a2f] border border-cyan-500/30 space-y-1">
-              <div className="text-rose-300 font-bold flex items-center gap-1.5">
+            <div className="p-4 rounded-2xl bg-[#073052] border-2 border-cyan-400/40 space-y-1.5 shadow-sm">
+              <div className="text-rose-200 font-black flex items-center gap-1.5 text-sm">
                 <span>🍽️</span>
-                <span>Alergias e intolerancias</span>
+                <span>Alergias</span>
               </div>
-              <p className="text-slate-200 leading-relaxed">
-                Indicadnos vuestras <strong>alergias</strong> en el formulario de confirmación para preparar un menú a medida.
+              <p className="text-slate-100 font-medium leading-relaxed">
+                Indicadnos vuestras <strong className="text-white">alergias e intolerancias</strong> en el formulario más abajo para adaptar vuestro menú con el chef.
               </p>
             </div>
           </div>

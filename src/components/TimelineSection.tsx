@@ -153,14 +153,14 @@ export function TimelineSection({ accessType }: TimelineSectionProps) {
         </div>
 
         {/* Visual Timeline Cards Grid with Milestone Spine */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {events.map((event, index) => {
             const visual = getEventVisuals(event, index);
 
             return (
               <div
                 key={event.id}
-                className="relative overflow-hidden rounded-3xl bg-[#08355a]/85 backdrop-blur-md p-5 sm:p-6 shadow-xl shadow-cyan-950/30 border-2 border-cyan-400/40 hover:border-orange-400/70 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+                className="relative overflow-hidden rounded-3xl bg-[#0a426e]/90 backdrop-blur-md p-4 sm:p-6 shadow-xl shadow-cyan-950/40 border-2 border-cyan-400/50 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
               >
                 {/* Visual Ambient Glow Corner */}
                 <div
@@ -171,7 +171,7 @@ export function TimelineSection({ accessType }: TimelineSectionProps) {
                 <div className="relative z-10 space-y-3.5">
                   {/* Top Header Row with Time pill & Milestone Step */}
                   <div className="flex items-center justify-between gap-2 flex-wrap">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5 sm:gap-2">
                       <span className="w-8 h-8 rounded-xl bg-orange-500/25 border border-orange-400/60 text-orange-300 font-mono font-black text-xs flex items-center justify-center shadow-xs">
                         {visual.stepNum}
                       </span>
@@ -194,7 +194,7 @@ export function TimelineSection({ accessType }: TimelineSectionProps) {
 
                   {/* Title & Thematic Icon */}
                   <div className="flex items-start gap-3 pt-1">
-                    <div className="p-2.5 rounded-2xl bg-[#031b31] border border-cyan-400/35 shrink-0 shadow-sm group-hover:border-orange-400 transition-colors">
+                    <div className="p-2.5 rounded-2xl bg-[#062948] border border-cyan-400/40 shrink-0 shadow-sm group-hover:border-orange-400 transition-colors">
                       {visual.icon}
                     </div>
 
@@ -212,21 +212,21 @@ export function TimelineSection({ accessType }: TimelineSectionProps) {
                     </div>
                   </div>
 
-                  {/* Visual Atmospheric Description */}
-                  <div className="text-xs sm:text-sm text-cyan-50 font-normal leading-relaxed bg-[#051c31]/80 rounded-2xl p-3 border border-cyan-500/20">
+                  {/* Visual Atmospheric Description - Brighter and clearer */}
+                  <div className="text-xs sm:text-sm text-white font-medium leading-relaxed bg-[#073052]/90 rounded-2xl p-3 sm:p-3.5 border border-cyan-400/35">
                     {event.description}
                   </div>
                 </div>
 
                 {/* Bottom Location Indicator */}
-                <div className="relative z-10 flex items-center justify-between gap-2 pt-3.5 mt-2 border-t border-cyan-500/20 text-xs">
-                  <div className="flex items-center gap-1.5 text-orange-300 font-semibold truncate">
+                <div className="relative z-10 flex items-center justify-between gap-2 pt-3.5 mt-2 border-t border-cyan-400/25 text-xs">
+                  <div className="flex items-center gap-1.5 text-orange-300 font-bold truncate">
                     <MapPin className="w-3.5 h-3.5 text-orange-400 shrink-0" aria-hidden="true" />
                     <span className="truncate">
                       Ubicación: <strong className="text-white">{event.location}</strong>
                     </span>
                   </div>
-                  <span className="text-[10px] text-cyan-300 font-mono shrink-0">17 JUL</span>
+                  <span className="text-[10px] text-cyan-200 font-mono font-bold shrink-0">17 JUL</span>
                 </div>
               </div>
             );

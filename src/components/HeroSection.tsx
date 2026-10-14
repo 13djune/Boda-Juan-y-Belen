@@ -102,25 +102,25 @@ export function HeroSection({ accessType, onNavigate }: HeroSectionProps) {
         </div>
 
         {/* Welcome Text with essential requirements */}
-        <div className="fluid-subtitle text-teal-950 font-normal leading-relaxed max-w-2xl mx-auto px-2 space-y-3">
-          <p className="font-medium">
+        <div className="fluid-subtitle text-slate-900 font-normal leading-relaxed max-w-2xl mx-auto px-1 sm:px-2 space-y-3">
+          <p className="font-semibold text-slate-900 text-sm sm:text-base">
             Compartir este momento con vosotros es lo que lo hace inolvidable. Celebraremos nuestro enlace el{' '}
-            <strong>Sábado 17 de Julio a las 20:30 h</strong> en el <strong>Faro de Mazarrón</strong> frente a las aguas del Mediterráneo.
+            <strong className="text-[#022842] underline decoration-orange-400 decoration-2">Sábado 17 de Julio a las 20:30 h</strong> en el <strong>Faro de Mazarrón</strong> frente a las aguas del Mediterráneo.
           </p>
 
-          {/* Key guest notes banner */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 text-xs text-left">
-            <div className="p-2.5 rounded-xl bg-white/90 border border-teal-400/50 text-teal-950 flex items-center gap-2 shadow-xs">
-              <span className="w-2.5 h-2.5 rounded-full bg-teal-500 shrink-0" />
-              <span><strong>Sin chaqueta ni corbata</strong> (venid frescos y cómodos)</span>
+          {/* Key guest notes banner - High contrast, legible and responsive */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-xs text-left">
+            <div className="p-3 rounded-2xl bg-white/95 border-2 border-teal-400/70 text-slate-900 flex items-center gap-2.5 shadow-sm">
+              <span className="w-3 h-3 rounded-full bg-teal-500 shrink-0" />
+              <span className="leading-snug"><strong className="text-teal-950 font-black">Sin chaqueta ni corbata</strong>: Venid frescos, elegantes y cómodos.</span>
             </div>
-            <div className="p-2.5 rounded-xl bg-white/90 border border-amber-400/60 text-amber-950 flex items-center gap-2 shadow-xs">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-500 shrink-0" />
-              <span>Se recomienda ir con <strong>zapato cómodo</strong></span>
+            <div className="p-3 rounded-2xl bg-white/95 border-2 border-amber-400/80 text-slate-900 flex items-center gap-2.5 shadow-sm">
+              <span className="w-3 h-3 rounded-full bg-amber-500 shrink-0" />
+              <span className="leading-snug">Se recomienda ir con <strong className="text-amber-950 font-black">zapato cómodo</strong> para los miradores.</span>
             </div>
-            <div className="p-2.5 rounded-xl bg-white/90 border border-orange-400/70 text-orange-950 flex items-center gap-2 shadow-xs">
-              <span className="w-2.5 h-2.5 rounded-full bg-orange-500 shrink-0 animate-ping" />
-              <span>Si no queréis perderos cosas, <strong>¡sed puntuales!</strong></span>
+            <div className="p-3 rounded-2xl bg-white/95 border-2 border-orange-400/90 text-slate-900 flex items-center gap-2.5 shadow-sm">
+              <span className="w-3 h-3 rounded-full bg-orange-500 shrink-0 animate-ping" />
+              <span className="leading-snug">Si no queréis perderos cosas, <strong className="text-orange-950 font-black">¡sed puntuales! (20:30 h)</strong>.</span>
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ export function HeroSection({ accessType, onNavigate }: HeroSectionProps) {
         <div
           role="region"
           aria-label="Cuenta atrás para el gran día"
-          className="bg-white/95 backdrop-blur-md border border-teal-300/80 rounded-3xl p-3.5 sm:p-4 shadow-xl max-w-sm mx-auto hover:border-orange-400/70 transition-all duration-300"
+          className="bg-white/95 backdrop-blur-md border-2 border-teal-300/90 rounded-3xl p-3.5 sm:p-4 shadow-xl w-full max-w-xs sm:max-w-sm mx-auto hover:border-orange-400 transition-all duration-300"
         >
           <div className="fluid-badge uppercase tracking-wider text-orange-600 mb-2 font-black flex items-center justify-center gap-1.5">
             <Heart className="w-3.5 h-3.5 text-orange-600 fill-orange-600 animate-pulse" aria-hidden="true" />

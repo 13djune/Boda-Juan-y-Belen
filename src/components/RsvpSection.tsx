@@ -212,22 +212,22 @@ ${
           /* RSVP Form with Perfect Symmetry and Balance */
           <form
             onSubmit={handleSubmit}
-            className="bg-[#092947]/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-2xl shadow-black/40 border border-cyan-500/30 space-y-6"
+            className="bg-[#0a426e]/95 backdrop-blur-md rounded-3xl p-4 sm:p-8 shadow-2xl shadow-cyan-950/40 border-2 border-cyan-400/40 space-y-5 sm:space-y-6"
           >
             {/* Row 1: Full Name & Attendance Radio Selection */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 items-start">
               {/* Full Name */}
               <div className="space-y-1.5">
                 <label
                   htmlFor="fullNameInput"
-                  className="block text-xs uppercase tracking-wider font-bold text-orange-300"
+                  className="block text-xs uppercase tracking-wider font-black text-amber-300"
                 >
                   Nombre y Apellidos <span className="text-rose-400">*</span>
                 </label>
                 <div className="relative">
                   <div
                     aria-hidden="true"
-                    className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-cyan-400"
+                    className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-cyan-300"
                   >
                     <User className="w-4 h-4" />
                   </div>
@@ -238,23 +238,23 @@ ${
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="Ej. Carmen García López"
-                    className="w-full pl-10 pr-3.5 py-3 rounded-2xl bg-[#051c31] border border-cyan-500/40 text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all"
+                    className="w-full pl-10 pr-3.5 py-3 rounded-2xl bg-[#062c4e] border-2 border-cyan-400/50 text-white placeholder-slate-300 text-base sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 transition-all shadow-inner"
                   />
                 </div>
               </div>
 
               {/* Attendance Choice */}
               <div className="space-y-1.5">
-                <span className="block text-xs uppercase tracking-wider font-bold text-orange-300">
+                <span className="block text-xs uppercase tracking-wider font-black text-amber-300">
                   ¿Nos acompañas en el Faro? <span className="text-rose-400">*</span>
                 </span>
 
-                <div className="grid grid-cols-2 gap-2.5">
+                <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
                   <label
-                    className={`py-3 px-4 rounded-2xl border-2 flex items-center justify-center gap-2 cursor-pointer transition-all ${
+                    className={`py-3 px-3 sm:px-4 rounded-2xl border-2 flex items-center justify-center gap-2 cursor-pointer transition-all ${
                       attendance === 'yes'
-                        ? 'border-orange-500 bg-orange-500/30 text-white font-bold shadow-md'
-                        : 'border-cyan-500/30 bg-[#051c31] hover:border-cyan-500/60 text-cyan-100 font-medium'
+                        ? 'border-orange-400 bg-orange-500/35 text-white font-black shadow-md'
+                        : 'border-cyan-400/40 bg-[#062c4e] hover:border-cyan-400/70 text-cyan-100 font-bold'
                     }`}
                   >
                     <input
@@ -269,10 +269,10 @@ ${
                   </label>
 
                   <label
-                    className={`py-3 px-4 rounded-2xl border-2 flex items-center justify-center gap-2 cursor-pointer transition-all ${
+                    className={`py-3 px-3 sm:px-4 rounded-2xl border-2 flex items-center justify-center gap-2 cursor-pointer transition-all ${
                       attendance === 'no'
-                        ? 'border-slate-500 bg-white/15 text-white font-bold'
-                        : 'border-cyan-500/30 bg-[#051c31] hover:border-cyan-500/60 text-cyan-100 font-medium'
+                        ? 'border-slate-400 bg-white/20 text-white font-black'
+                        : 'border-cyan-400/40 bg-[#062c4e] hover:border-cyan-400/70 text-cyan-100 font-bold'
                     }`}
                   >
                     <input
@@ -291,10 +291,10 @@ ${
 
             {/* Companion (+1) Toggle Row */}
             {attendance === 'yes' && (
-              <div className="space-y-2.5 pt-2 border-t border-cyan-500/20">
+              <div className="space-y-2.5 pt-2 border-t border-cyan-400/25">
                 <label
                   htmlFor="companionCheckbox"
-                  className="text-xs uppercase tracking-wider font-bold text-cyan-200 flex items-center gap-2.5 cursor-pointer select-none"
+                  className="text-xs uppercase tracking-wider font-black text-cyan-100 flex items-center gap-2.5 cursor-pointer select-none"
                 >
                   <input
                     id="companionCheckbox"
@@ -310,7 +310,7 @@ ${
                   <div className="relative">
                     <div
                       aria-hidden="true"
-                      className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-cyan-400"
+                      className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-cyan-300"
                     >
                       <Users className="w-4 h-4" />
                     </div>
@@ -320,7 +320,7 @@ ${
                       value={companionName}
                       onChange={(e) => setCompanionName(e.target.value)}
                       placeholder="Nombre y apellidos de tu acompañante"
-                      className="w-full pl-10 pr-3.5 py-3 rounded-2xl bg-[#051c31] border border-cyan-500/40 text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all"
+                      className="w-full pl-10 pr-3.5 py-3 rounded-2xl bg-[#062c4e] border-2 border-cyan-400/50 text-white placeholder-slate-300 text-base sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 transition-all shadow-inner"
                     />
                   </div>
                 )}
@@ -329,20 +329,20 @@ ${
 
             {/* Friday Family Dinner Attendance (Exclusively for FAMILIA27) */}
             {accessType === 'family' && attendance === 'yes' && (
-              <div className="p-4 rounded-2xl bg-[#04172a] border border-orange-400/50 space-y-2.5 shadow-md">
-                <div className="flex items-center gap-2 text-orange-300 font-bold text-xs uppercase tracking-wider">
+              <div className="p-4 rounded-2xl bg-[#073052] border-2 border-orange-400/70 space-y-2.5 shadow-md">
+                <div className="flex items-center gap-2 text-amber-300 font-black text-xs uppercase tracking-wider">
                   <Utensils className="w-4 h-4 text-orange-400" aria-hidden="true" />
                   <span>Cena Familiar • Viernes 16 a las 20:30 en el Faro de Mazarrón</span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
-                  ¿Nos acompañarás también en la <strong>Cena familiar el viernes 16 a las 20:30 en el faro de Mazarrón</strong> antes del gran día?
+                <p className="text-xs sm:text-sm text-slate-100 leading-relaxed font-medium">
+                  ¿Nos acompañarás también en la <strong className="text-white">Cena familiar el viernes 16 a las 20:30 en el faro de Mazarrón</strong> antes del gran día?
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <label
-                    className={`py-2.5 px-3.5 rounded-xl border flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm font-bold transition-all ${
+                    className={`py-3 px-3.5 rounded-xl border-2 flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm font-bold transition-all ${
                       fridayAttendance === 'yes'
-                        ? 'bg-orange-500/30 border-orange-400 text-white shadow-sm'
-                        : 'bg-[#061e36] border-cyan-500/25 text-cyan-200 hover:border-cyan-500/50'
+                        ? 'bg-orange-500/35 border-orange-400 text-white shadow-sm'
+                        : 'bg-[#062846] border-cyan-400/40 text-cyan-100 hover:border-cyan-400/70'
                     }`}
                   >
                     <input
@@ -357,10 +357,10 @@ ${
                   </label>
 
                   <label
-                    className={`py-2.5 px-3.5 rounded-xl border flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm font-bold transition-all ${
+                    className={`py-3 px-3.5 rounded-xl border-2 flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm font-bold transition-all ${
                       fridayAttendance === 'no'
-                        ? 'bg-white/15 border-slate-400 text-white'
-                        : 'bg-[#061e36] border-cyan-500/25 text-cyan-200 hover:border-cyan-500/50'
+                        ? 'bg-white/20 border-slate-300 text-white'
+                        : 'bg-[#062846] border-cyan-400/40 text-cyan-100 hover:border-cyan-400/70'
                     }`}
                   >
                     <input
@@ -378,12 +378,12 @@ ${
             )}
 
             {/* Perfectly Balanced 2-Column Row: Dietary Notes & Dedication Message */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2 border-t border-cyan-500/20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 pt-2 border-t border-cyan-400/25">
               {/* Column 1: Dietary Restrictions */}
               <div className="space-y-1.5 flex flex-col justify-between">
                 <label
                   htmlFor="dietaryInput"
-                  className="block text-xs uppercase tracking-wider font-bold text-orange-300 flex items-center gap-1.5"
+                  className="block text-xs uppercase tracking-wider font-black text-amber-300 flex items-center gap-1.5"
                 >
                   <Utensils className="w-4 h-4 text-orange-400" aria-hidden="true" />
                   <span>Alergias o Restricciones de Menú</span>
@@ -394,7 +394,7 @@ ${
                   value={dietaryNotes}
                   onChange={(e) => setDietaryNotes(e.target.value)}
                   placeholder="Indica aquí celiaquía, alergias alimentarias o intolerancias para adaptar tu menú individualmente..."
-                  className="w-full px-3.5 py-3 rounded-2xl bg-[#051c31] border border-cyan-500/40 text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none transition-all"
+                  className="w-full px-3.5 py-3 rounded-2xl bg-[#062c4e] border-2 border-cyan-400/50 text-white placeholder-slate-300 text-base sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 resize-none transition-all shadow-inner"
                 />
               </div>
 
@@ -402,7 +402,7 @@ ${
               <div className="space-y-1.5 flex flex-col justify-between">
                 <label
                   htmlFor="coupleMessageInput"
-                  className="block text-xs uppercase tracking-wider font-bold text-orange-300 flex items-center gap-1.5"
+                  className="block text-xs uppercase tracking-wider font-black text-amber-300 flex items-center gap-1.5"
                 >
                   <Heart className="w-4 h-4 text-orange-400" aria-hidden="true" />
                   <span>Mensaje o Dedicatoria para Juan y Belén</span>
@@ -413,7 +413,7 @@ ${
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Unas palabras de cariño para los novios..."
-                  className="w-full px-3.5 py-3 rounded-2xl bg-[#051c31] border border-cyan-500/40 text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none transition-all"
+                  className="w-full px-3.5 py-3 rounded-2xl bg-[#062c4e] border-2 border-cyan-400/50 text-white placeholder-slate-300 text-base sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 resize-none transition-all shadow-inner"
                 />
               </div>
             </div>
